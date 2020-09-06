@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Main{% endblock %}
+{% block head %}
+    {{ super() }}
+    <div class="container">
+	<form method="POST" action="/response">
+		<div class="form-group">
+			<label for="email">Адрес почты</label>
+			<input type="email" class="form-control" id="email" placeholder="name@example.com">
+		</div>
+		<div class="form-group">
+			<label for="mailText">Текст письма</label>
+			<textarea class="form-control" id="mailText" rows="3"></textarea>
+		</div>
+		<div class="form-group">
+			<label for="seconds">Через сколько секунд отправить</label>
+			<input class="form-control" type="number" value="0" id="seconds">
+		</div>
+		
+		<div class="form-group">
+		<button type="submit" class="btn btn-primary">Отправить</button>
+		</div>
+	</form>
+	</div>
+{% endblock %}
